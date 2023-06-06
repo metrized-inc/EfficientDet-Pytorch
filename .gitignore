@@ -129,3 +129,10 @@ dmypy.json
 .pyre/
 .idea/
 weights/
+
+
+datasets
+*.ipynb
+logs
+output
+projects

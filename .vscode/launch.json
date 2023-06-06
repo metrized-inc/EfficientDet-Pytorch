@@ -1,0 +1,34 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Python: Current File",
+            "type": "python",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal",
+            "justMyCode": true,
+            "args": [
+                "--weights",
+                "logs/tata-m21e/efficientdet-d2_49_15000.pth",
+                "--test_path",
+                "datasets/tata-m21e/test",
+                "--output_path",
+                "output/test_1"
+            ]
+            // "args": [
+            //     "-c",
+            //     "2",
+            //     "-p",
+            //     "tata-m21e",
+            //     "--batch_size",
+            //     "4",
+            //     "--lr",
+            //     "1e-5"
+            // ]
+        }
+    ]
+}

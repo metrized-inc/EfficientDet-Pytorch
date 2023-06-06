@@ -70,8 +70,11 @@ def preprocess(*image_path, max_size=512, mean=(0.485, 0.456, 0.406), std=(0.229
     normalized_imgs = [(img[..., ::-1] / 255 - mean) / std for img in ori_imgs]
     imgs_meta = [aspectaware_resize_padding(img, max_size, max_size,
                                             means=None) for img in normalized_imgs]
-    framed_imgs = [img_meta[0] for img_meta in imgs_meta]
-    framed_metas = [img_meta[1:] for img_meta in imgs_meta]
+    # framed_imgs = [img_meta[0] for img_meta in imgs_meta]
+    # framed_metas = [img_meta[1:] for img_meta in imgs_meta]
+
+    framed_imgs = imgs_meta[0][0]
+    framed_metas = imgs_meta[0][1:]
 
     return ori_imgs, framed_imgs, framed_metas
 
